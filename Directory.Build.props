@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <GameClientDllPath>/home/vscode/lib</GameClientDllPath>
+    <LocalDestinationPath>/home/vscode/dest</LocalDestinationPath>
+  </PropertyGroup>
+</Project>

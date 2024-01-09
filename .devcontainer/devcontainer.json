@@ -1,0 +1,15 @@
+{
+    "name": "C# (.NET)",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dotnet",
+    "workspaceFolder": "/workspaces",
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "ms-dotnettools.csdevkit"
+            ]
+        }
+    }
+}

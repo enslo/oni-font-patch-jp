@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Copyright>Copyright (c) 2024 Ernest Croft</Copyright>
+
+    <TargetFramework>net4.8</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <RootNamespace>enslo.OniFontPatchJp</RootNamespace>
+
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Configuration>Release</Configuration>
+  </PropertyGroup>
+
+  <Target Name="Deploy" AfterTargets="Build">
+    <ItemGroup>
+      <ArtifactFile Include="./bin/$(Configuration)/$(MSBuildProjectName).dll" />
+      <ResourceFiles Include="../resources/**/*.*" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(ArtifactFile);@(ResourceFiles)" DestinationFolder="$(LocalDestinationPath)/$(MSBuildProjectName)/%(RecursiveDir)" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>$(GameClientDllPath)/0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(GameClientDllPath)/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(GameClientDllPath)/Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(GameClientDllPath)/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(GameClientDllPath)/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(GameClientDllPath)/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(GameClientDllPath)/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameClientDllPath)/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(GameClientDllPath)/UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+services:
+  dotnet:
+    image: mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces
+      - type: bind
+        source: $ONI_CLIENT_DLL_PATH
+        target: /home/vscode/lib
+      - type: bind
+        source: $ONI_LOCAL_DEV_MOD_PATH
+        target: /home/vscode/dest
+        bind:
+          create_host_path: true

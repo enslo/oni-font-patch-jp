@@ -1,0 +1,24 @@
+[h1]これはなに？[/h1]
+英語版の特徴的なフォント使いを、できる限り日本語版でも再現したMODです。
+読みやすさより雰囲気を大事にしたい方におすすめです。
+
+[b][u]このMODに日本語翻訳は含まれていません。[/u][/b]
+動作には [url=https://steamcommunity.com/sharedfiles/filedetails/?id=928606476]日本語化MOD[/url] がインストール&有効化されている必要があります。
+
+[h1]使用フォント[/h1]
+[list]
+[*]メインメニュー、各種ボタン、資源一覧など
+  [list][*][url=http://getsuren.com/kiniro_series.html]きんいろサンセリフ[/url][/list]
+[*]ツールチップの見出し
+  [list][*][url=https://modi.jpn.org/font_senobi.php]せのびゴシック[/url][/list]
+[*]それ以外
+  [list][*]元々のフォント ([url=https://fonts.adobe.com/fonts/noto-sans-cjk-jp]Noto Sans CJK JP[/url])[/list]
+[/list]
+[h1]ソースコード[/h1]
+https://github.com/enslo/oni-font-patch-jp
+
+[h1]おねがい[/h1]
+どのプラットフォームでも動くように作った[b]はず[/b]なんですが、Windows 環境しかなくて、他では動作確認できていません。
+OSX、Linux でも動いたよ！動かなかったよ！というご報告をいただけると、大変たすかります。
+
+また、文字種はだいたいカバーできていると思いますが、欠けがあったら教えてください。
